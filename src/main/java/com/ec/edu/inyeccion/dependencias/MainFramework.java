@@ -1,8 +1,8 @@
-package com.ec.edu.dependencias;
+package com.ec.edu.inyeccion.dependencias;
 
 import java.util.Scanner;
 
-public class MainUCE {
+public class MainFramework {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,11 +19,10 @@ public class MainUCE {
 		System.out.println("Ingrese el numero");
 		String numero=in.nextLine();
 		
-		Matricula matricula = new Matricula();
+		Matricula matricula = new Matricula(new Estudiante(), new Direccion());
 		matricula.setAnio(2018);
 		matricula.setSemestre("sexto");
-		int tipo=1;
-		String mensaje = matricula.matricular(nombre, apellido, calle, numero, tipo);
+		String mensaje = matricula.matricular(nombre, apellido, calle, numero);
 		System.out.println(matricula.getEstudiante());
 		System.out.println(mensaje);
 		

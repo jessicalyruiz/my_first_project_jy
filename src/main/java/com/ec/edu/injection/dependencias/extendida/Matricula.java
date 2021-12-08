@@ -1,27 +1,29 @@
-package com.ec.edu.dependencias;
+package com.ec.edu.injection.dependencias.extendida;
 
 public class Matricula {
 
 	private String semestre;
 	private int anio; //int: para poder operar con él
 	private Estudiante estudiante;
+	private Direccion direccion;
+	
+	
+	public Matricula(Estudiante estudiante,Direccion direccion ) {
+		this.estudiante=estudiante;
+		this.direccion=direccion;
+	}
 	
 	
 	
-	
-	
-	public String matricular(String nombre, String apellido, String calle, String numero,  int tipo) {
-		this.estudiante=new Estudiante();
+	public String matricular(String nombre, String apellido, String calle, String numero) {
 		this.estudiante.setApellido(apellido);
 		this.estudiante.setNombre(nombre);
 		
 		
-		Direccion direccion=new Direccion();
-		direccion.setCallePrincipal(calle);
-		direccion.setNumeracion(numero);
+		this.direccion.setCallePrincipal(calle);
+		this.direccion.setNumeracion(numero);
 		this.estudiante.setDireccion(direccion);
-		
-		estudiante.pagarSerciPagos(nombre, tipo);
+		estudiante.pagarServiPagos(nombre);
 		return "Estudiante guardado con exito";
 		//logica para guardar los datos de la matricula y el estudiante
 		
@@ -33,6 +35,20 @@ public class Matricula {
 	@Override
 	public String toString() {
 		return "Matricula [semestre=" + semestre + ", anio=" + anio + ", estudiante=" + estudiante + "]";
+	}
+
+
+
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+
+
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
 	}
 
 

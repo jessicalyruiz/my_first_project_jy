@@ -1,4 +1,4 @@
-package com.ec.edu.dependencias;
+package com.ec.edu.injection.dependencias.extendida;
 
 public class Estudiante {
 
@@ -6,22 +6,11 @@ public class Estudiante {
 	private String apellido;
 	private Direccion direccion;
 	
-	private int tipo;
 	
-	public void pagarSerciPagos(String nombre,  int tipo) {
+	
+	public void pagarServiPagos(String nombre) {
 		System.out.println(nombre+" El estudiante realizo el pago");
 		System.out.println(nombre+ " El estudiante presenta el pago");
-		switch (tipo) {
-		case 1:
-			System.out.println("pago con tarjeta");
-			break;
-		case 2:
-			System.out.println("pago efectivo");
-			break;
-
-		default:
-			break;
-		}
 	}
 	
 	
