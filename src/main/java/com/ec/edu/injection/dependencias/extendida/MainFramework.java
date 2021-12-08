@@ -36,11 +36,9 @@ public class MainFramework {
 			estudiante= new EstudianteArqui();
 			break;
 		case 4:
-			estudiante= new EstudianteArqui();
+			estudiante= new EstudianteAdministracion();
 			break;
-		case 5:
-			estudiante= new EstudianteOdonto();
-			break;
+
 
 		default:
 			estudiante= new Estudiante();

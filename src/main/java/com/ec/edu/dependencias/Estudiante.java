@@ -2,9 +2,9 @@ package com.ec.edu.dependencias;
 
 public class Estudiante {
 
-	private String nombre;
-	private String apellido;
-	private Direccion direccion;
+	protected String nombre;
+	protected String apellido;
+	protected Direccion direccion;
 	
 	private int tipo;
 	
