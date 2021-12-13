@@ -16,6 +16,22 @@ public class MainFramework {
 			cuenta= new CuentaAhorro();
 		}else if(tipo==3) {
 			cuenta=new CuentaFuturo();
+		}else if(tipo==4) {
+			cuenta=new ICuenta() {
+
+				@Override
+				public void calcularDescuento(String numero) {
+					// TODO Auto-generated method stub
+					System.out.println("***Calculando descuento de cuenta clase anonima");
+				}
+
+				@Override
+				public void calcularBeneficio() {
+					// TODO Auto-generated method stub
+					System.out.println("***beneficio clase anonima");
+				}
+				
+			};
 		}
 		
 		GestorCuetas gestor =new GestorCuetas(cuenta);
