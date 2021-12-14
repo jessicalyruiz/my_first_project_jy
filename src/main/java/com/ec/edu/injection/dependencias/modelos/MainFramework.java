@@ -19,13 +19,11 @@ public class MainFramework {
 		}else if(tipo==4) {
 			cuenta=new ICuenta() {
 
-				@Override
 				public void calcularDescuento(String numero) {
 					// TODO Auto-generated method stub
 					System.out.println("***Calculando descuento de cuenta clase anonima");
 				}
 
-				@Override
 				public void calcularBeneficio() {
 					// TODO Auto-generated method stub
 					System.out.println("***beneficio clase anonima");

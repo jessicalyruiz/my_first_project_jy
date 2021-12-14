@@ -4,13 +4,11 @@ public class CuentaCorriente implements ICuenta {
 
 	private float montoMin;
 	
-	@Override
 	public void calcularDescuento(String numero) {
 		System.out.println("calculando....corriente ");
 	}
 
 
-	@Override
 	public void calcularBeneficio() {
 		System.out.println("calculando.... beneficio corriente ");
 	}

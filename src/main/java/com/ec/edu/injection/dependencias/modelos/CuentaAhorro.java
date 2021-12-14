@@ -5,11 +5,11 @@ public class CuentaAhorro implements ICuenta{
 	private int monto;
 	
 	
-		@Override
+	
 	public void calcularDescuento(String numero) {
 		System.out.println("Se calcula el descueto de: "+ numero);
 	}
-	@Override
+	
 	public void calcularBeneficio() {
 		System.out.println("Se calcula el beneficio...");
 	}
